@@ -23,7 +23,7 @@ spec:
         - "git.hiast.edu.sy"
       containers:
         - name: configserver
-          image: 172.29.3.41:5000/configserver:1.0.0.1
+          image: 172.29.3.41:5000/configserver:1.0.0.4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8888
