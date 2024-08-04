@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: jobseekerservice
-          image: 172.29.3.41:5000/jobseekersvc:1.0.0.7
+          image: 172.29.3.41:5000/jobseekersvc:1.0.0.9
           imagePullPolicy: IfNotPresent
           resources:
             requests:
