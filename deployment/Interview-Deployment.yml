@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: interviewservice
-          image: 172.29.3.41:5000/interviewsvc:1.0.0.6
+          image: 172.29.3.41:5000/interviewsvc:1.0.0.7
           imagePullPolicy: IfNotPresent
           resources:
             requests:
