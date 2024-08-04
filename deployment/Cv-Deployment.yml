@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: cvservice
-          image: 172.29.3.41:5000/cvservice:1.0.0.1
+          image: 172.29.3.41:5000/cvservice:1.0.0.3
           imagePullPolicy: IfNotPresent
           resources:
             requests:
