@@ -28,5 +28,3 @@ spec:
           ports:
             - name: job
               containerPort: 9001
-
-

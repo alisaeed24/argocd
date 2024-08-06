@@ -28,4 +28,3 @@ spec:
           ports:
             - name: jobapp
               containerPort: 9002
-
