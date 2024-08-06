@@ -12,6 +12,6 @@ spec:
     - name: notification
       port: 8090
       targetPort: notification
-  type: ClusterIP
+  type: LoadBalancer
 
 
