@@ -12,6 +12,6 @@ spec:
     - name: jobapp
       port: 9002
       targetPort: jobapp
-  type: ClusterIP
+  type: LoadBalancer
 
 
