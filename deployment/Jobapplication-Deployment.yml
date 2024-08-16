@@ -21,10 +21,6 @@ spec:
         - name: jobapplicationservice
           image: 172.29.3.41:5000/jobapplication:1.0.0.5
           imagePullPolicy: IfNotPresent
-          resources:
-            requests:
-              cpu: "500m"
-              memory: "700Mi"
           ports:
             - name: jobapp
               containerPort: 9002
