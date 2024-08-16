@@ -22,9 +22,6 @@ spec:
           image: 172.29.3.41:5000/notificationsvc:1.0.0.11
           imagePullPolicy: Always
           resources:
-            requests:
-              cpu: "500m"
-              memory: "1000Mi"
           ports:
             - name: notification
               containerPort: 8090
