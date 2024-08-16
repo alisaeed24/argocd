@@ -21,10 +21,7 @@ spec:
         - name: cvservice
           image: 172.29.3.41:5000/cvservice:1.0.0.3
           imagePullPolicy: IfNotPresent
-          resources:
-            requests:
-              cpu: "300m"
-              memory: "500Mi"
+
           ports:
             - name: cv
               containerPort: 8086
