@@ -21,10 +21,6 @@ spec:
         - name: interviewservice
           image: 172.29.3.41:5000/interviewsvc:1.0.0.9
           imagePullPolicy: IfNotPresent
-          resources:
-            requests:
-              cpu: "500m"
-              memory: "500Mi"
           ports:
             - name: interview
               containerPort: 8087
