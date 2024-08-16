@@ -21,10 +21,6 @@ spec:
         - name: jobseekerservice
           image: 172.29.3.41:5000/jobseekersvc:1.0.0.9
           imagePullPolicy: IfNotPresent
-          resources:
-            requests:
-              cpu: "300m"
-              memory: "500Mi"
           ports:
             - name: jobseeker
               containerPort: 8085
