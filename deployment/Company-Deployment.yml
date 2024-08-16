@@ -21,10 +21,7 @@ spec:
         - name: companyservice
           image: 172.29.3.41:5000/companysvc:1.0.0.10
           imagePullPolicy: IfNotPresent
-          resources:
-            requests:
-              cpu: "10m"
-              memory: "50Mi"
+          
           ports:
             - name: company
               containerPort: 9003
