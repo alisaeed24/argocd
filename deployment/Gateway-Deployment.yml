@@ -21,10 +21,6 @@ spec:
         - name: gatewayservice
           image: 172.29.3.41:5000/gatewaysvc:1.0.0.17
           imagePullPolicy: IfNotPresent
-          resources:
-            requests:
-              cpu: "50m"
-              memory: "200Mi"
           ports:
             - name: gate
               containerPort: 8000
