@@ -21,10 +21,6 @@ spec:
         - name: sequenceservice
           image: 172.29.3.41:5000/sequencegenerator:1.0.0.4
           imagePullPolicy: IfNotPresent
-          resources:
-            requests:
-              cpu: "300m"
-              memory: "500Mi"
           ports:
             - name: sequence
               containerPort: 9000
