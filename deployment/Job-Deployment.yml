@@ -21,10 +21,6 @@ spec:
         - name: jobservice
           image: 172.29.3.41:5000/jobsvc-prod:1.0.0.48
           imagePullPolicy: IfNotPresent
-          resources:
-            requests:
-              cpu: "500m"
-              memory: "1000Mi"
           ports:
             - name: job
               containerPort: 9001
