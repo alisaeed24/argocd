@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: companyservice
-          image: 172.29.3.41:5000/companysvc:1.0.0.10
+          image: 172.29.3.41:5000/companysvc:1.0.0.11
           imagePullPolicy: IfNotPresent
           
           ports:
