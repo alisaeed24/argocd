@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: jobapplicationservice
-          image: 172.29.3.41:5000/jobapplication:1.0.0.5
+          image: 172.29.3.41:5000/jobapplication:1.0.0.6
           imagePullPolicy: IfNotPresent
           ports:
             - name: jobapp
