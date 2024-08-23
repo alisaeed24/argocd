@@ -1,0 +1,229 @@
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: companyservice-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: companyservice
+  updatePolicy:
+    updateMode: "Auto" 
+  resourcePolicy:
+    containerPolicies:
+    - containerName: companyservice
+      minAllowed:
+        cpu: "10m"     
+        memory: "50Mi" 
+      maxAllowed:
+        cpu: "200m"     
+        memory: "250Mi"  
+      controlledResources: ["cpu", "memory"]    
+---
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: configserver-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: configserver
+  updatePolicy:
+    updateMode: "Auto" 
+  resourcePolicy:
+    containerPolicies:
+    - containerName: configserver
+      minAllowed:
+        cpu: "10m"     
+        memory: "100Mi" 
+      maxAllowed:
+        cpu: "100m"     
+        memory: "200Mi"  
+      controlledResources: ["cpu", "memory"]
+---
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: cvservice-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: cvservice
+  updatePolicy:
+    updateMode: "Auto" 
+  resourcePolicy:
+    containerPolicies:
+    - containerName: cvservice
+      minAllowed:
+        cpu: "10m"     
+        memory: "50Mi" 
+      maxAllowed:
+        cpu: "200m"     
+        memory: "200Mi"  
+      controlledResources: ["cpu", "memory"]
+---
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: gatewayservice-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: gatewayservice
+  updatePolicy:
+    updateMode: "Auto" 
+  resourcePolicy:
+    containerPolicies:
+    - containerName: gatewayservice
+      minAllowed:
+        cpu: "10m"     
+        memory: "700Mi" 
+      maxAllowed:
+        cpu: "500m"     
+        memory: "850Mi"  
+      controlledResources: ["cpu", "memory"]
+---
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: interviewservice-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: interviewservice
+  updatePolicy:
+    updateMode: "Auto"
+  resourcePolicy:
+    containerPolicies:
+    - containerName: interviewservice
+      minAllowed:
+        cpu: "10m"     
+        memory: "50Mi" 
+      maxAllowed:
+        cpu: "300m"     
+        memory: "600Mi"  
+      controlledResources: ["cpu", "memory"] 
+---
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: jobapplicationservice-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: jobapplicationservice
+  updatePolicy:
+    updateMode: "Auto" 
+  resourcePolicy:
+    containerPolicies:
+    - containerName: jobapplicationservice
+      minAllowed:
+        cpu: "10m"     
+        memory: "100Mi" 
+      maxAllowed:
+        cpu: "500m"     
+        memory: "500Mi"  
+      controlledResources: ["cpu", "memory"]
+---
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: jobseekerservice-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: jobseekerservice
+  updatePolicy:
+    updateMode: "Auto" 
+  resourcePolicy:
+    containerPolicies:
+    - containerName: jobseekerservice
+      minAllowed:
+        cpu: "10m"     
+        memory: "100Mi" 
+      maxAllowed:
+        cpu: "500m"     
+        memory: "700Mi"  
+      controlledResources: ["cpu", "memory"]
+---
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: jobservice-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: jobservice
+  updatePolicy:
+    updateMode: "Auto" 
+  resourcePolicy:
+    containerPolicies:
+    - containerName: jobservice
+      minAllowed:
+        cpu: "10m"     
+        memory: "200Mi" 
+      maxAllowed:
+        cpu: "500m"     
+        memory: "850Mi"  
+      controlledResources: ["cpu", "memory"]
+---
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: notificationservice-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: notificationservice
+  updatePolicy:
+    updateMode: "Auto" 
+  resourcePolicy:
+    containerPolicies:
+    - containerName: notificationservice
+      minAllowed:
+        cpu: "10m"     
+        memory: "50Mi" 
+      maxAllowed:
+        cpu: "300m"     
+        memory: "500Mi"  
+      controlledResources: ["cpu", "memory"]
+---
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: sequenceservice-vpa
+  namespace: jobportal
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind: Deployment
+    name: sequenceservice
+  updatePolicy:
+    updateMode: "Auto"
+  resourcePolicy:
+    containerPolicies:
+    - containerName: jobservice
+      minAllowed:
+        cpu: "10m"     
+        memory: "50Mi" 
+      maxAllowed:
+        cpu: "400m"     
+        memory: "650Mi"  
+      controlledResources: ["cpu", "memory"] 
