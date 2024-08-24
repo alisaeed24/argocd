@@ -125,11 +125,11 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: gatewayservice
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 5
   behavior:
     scaleDown:
-      stabilizationWindowSeconds: 0
+      stabilizationWindowSeconds: 600
       policies:
       - type: Percent
         value: 80
@@ -281,11 +281,11 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: jobservice
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 4
   behavior:
     scaleDown:
-      stabilizationWindowSeconds: 0
+      stabilizationWindowSeconds: 600
       policies:
       - type: Percent
         value: 90
