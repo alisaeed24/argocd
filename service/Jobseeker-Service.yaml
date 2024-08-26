@@ -12,6 +12,6 @@ spec:
     - name: jobseeker
       port: 8085
       targetPort: jobseeker
-  type: LoadBalancer
+  type: ClusterIP
 
 
