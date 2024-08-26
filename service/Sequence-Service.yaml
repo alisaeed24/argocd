@@ -12,5 +12,6 @@ spec:
     - name: sequence
       port: 9000
       targetPort: sequence
-  type: LoadBalancer
+  type: ClusterIP
+  
 
