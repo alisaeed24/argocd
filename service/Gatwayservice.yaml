@@ -12,7 +12,7 @@ spec:
     - name: gate
       port: 8000
       targetPort: gate
-  type: LoadBalancer
+  type: ClusterIP
 
 
 
