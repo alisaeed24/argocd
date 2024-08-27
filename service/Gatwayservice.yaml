@@ -12,7 +12,8 @@ spec:
     - name: gate
       port: 8000
       targetPort: gate
-  type: ClusterIP
+      nodePort: 31158
+  type: NodePort
 
 
 
