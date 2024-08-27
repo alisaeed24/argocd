@@ -12,5 +12,5 @@ spec:
     - name: company
       port: 9003
       targetPort: company
-  type: LoadBalancer
+  type: NodePort
 
